@@ -1,0 +1,114 @@
+/*general stuff*/
+body {
+  /* Everything about the background */
+  background-color: rgb(152, 223, 235);
+  background-image: url("/images/bg-light.png");
+  animation-name: tiledBackground;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  /* Everything else */
+  font-family: 'Comic Sans MS';
+  color: rgb(0, 0, 0);
+  margin: auto;
+  padding: 10px;
+  text-align: left;
+  max-width: 1200px;
+  font-size: 110%;
+}
+
+/* Background animation */
+@keyframes tiledBackground {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 600px -600px;
+  }
+}
+
+header {
+  width: fit-content;
+  height: 300px;
+  margin: auto;
+}
+
+main {
+  text-align: left;
+  margin: auto;
+  margin-top: 0;
+  padding: 10px;
+  background-color: rgb(118, 176, 194);
+  border: 2px dashed rgb(10, 74, 94);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgb(67, 95, 104);
+  min-height: 500px;
+
+  /* Page layout specifications */
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-column: 3;
+  gap: 10px;
+}
+
+#left-side {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+
+  nav-bar {
+    height: fit-content;
+
+    nav {
+      background-color: rgb(255, 255, 255);
+      display: grid;
+      grid-column: 1;
+      padding: 10px;
+      padding-top: 10px;
+
+      button {
+        margin: 2px;
+        text-align: left;
+      }
+    }
+  }
+
+  aside {
+    padding: 10px;
+    background-color: white;
+    img {
+      margin: 6px;
+    }
+  }
+
+        h2,
+      h3 {
+        margin: 1px;
+      }
+}
+
+#content {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+}
+
+#right-side {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+
+  updates-bar {
+    aside {
+      padding: 10px;
+      background-color: white;
+    }
+  }
+}
+/* Classes */
+.box {
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px grey;
+}
