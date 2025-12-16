@@ -37,6 +37,7 @@
   </main>
 
   <script>
+    // Let's break some things!
         document.addEventListener('DOMContentLoaded', function() {
           const content = document.getElementById('content')
             fetch('./pages/home.html').then(function (res) {
