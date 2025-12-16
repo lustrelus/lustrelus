@@ -19,7 +19,7 @@ export class Navigation extends HTMLElement {
             button.innerHTML = `<h3>${page.name}</h3>`;
 
             button.addEventListener("click", function() {
-            Render(`./pages${page.link}.html`)
+            Render(`./views${page.link}.php`)
         });
 
             nav.appendChild(button);

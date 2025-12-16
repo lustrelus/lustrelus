@@ -1,55 +1,23 @@
-<!DOCTYPE html>
-<html>
+<?php 
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="description" content="The website of LustreLus" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+$request = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '/default/path';
+$viewDir = '/views/';
 
-  <script src="/js/components.js" type="module">
-  </script>
+switch ($request) {
+  case '':
+  case '/':
+    require __DIR__ . $viewDir . 'home.php';
+    break;
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css">
-    <link rel="icon" href="data:image/svg+xml,
-    <svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22>
-      <text y=%22.9em%22 font-size=%2290%22>☁️</text>
-    </svg>">
+  case '/about':
+    require __DIR__ . $viewDir . 'about.php';
+    break;
 
-  <title>Lustre's home</title>
-</head>
+  case '/socials':
+    require __DIR__ . $viewDir . 'socials.php';
+    break;
 
-<body>
-  <header>
-    <img src="/images/banner.png">
-  </header>
-
-  <main>
-
-    <div id="left-side">
-    </div>
-
-    <div id="content" class="box">
-    </div>
-
-    <div id="right-side">
-    </div>
-
-  </main>
-
-  <script>
-    // Let's break some things!
-        document.addEventListener('DOMContentLoaded', function() {
-          const content = document.getElementById('content')
-            fetch('./pages/home.html').then(function (res) {
-                if (res.ok) {
-                    return res.text();
-                }
-                throw res;
-            }).then(function (text) {
-                content.innerHTML = text;
-            });
-    });
-  </script>
-</body>
-
-</html>
+  default:
+    http_response_code(404);
+    require __DIR__ . $viewDir . '/error/404.php';
+}

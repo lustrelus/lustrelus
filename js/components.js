@@ -1,5 +1,5 @@
-import { Navigation } from '/components/navigation.js';
-import { Inspiration } from '/components/inspiration.js';
+import { Navigation } from '/views/components/navigation.js';
+import { Inspiration } from '/views/components/inspiration.js';
 
 customElements.define(
     "nav-bar",  Navigation);
