@@ -15,27 +15,5 @@
       <text y=%22.9em%22 font-size=%2290%22>☁️</text>
     </svg>">
 
-  <title><?php //echo title?></title>
+  <title>Lustre's Home</title>
 </head>
-
-<body>
-  <header>
-    <img src="/images/banner.png">
-  </header>
-
-  <main>
-
-    <div id="left-side">
-    </div>
-
-    <div id="content" class="box">
-        <?php //echo $content ?>
-    </div>
-
-    <div id="right-side">
-    </div>
-
-  </main>
-</body>
-
-</html>
