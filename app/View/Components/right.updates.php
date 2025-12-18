@@ -13,7 +13,7 @@ class right.updates extends Component
      */
     public function __construct()
     {
-        //
+
     }
 
     /**
