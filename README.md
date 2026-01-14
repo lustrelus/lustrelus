@@ -2,7 +2,7 @@
 
 ## Who am I?
 
-My name is Mika, I'm currently a first year student at my university, learning all about Information and Communication Technologies (ICT)  
+My name is Mika, I'm currently a second year student at my university, learning all about Information and Communication Technologies (ICT)  
 I go by He/Him or They/Them pronouns and I prefer dogs over cats 🐕  
 
 ## What brought me here?
@@ -11,7 +11,7 @@ This GitHub profile was initially created purely for the projects related to thi
 
 ## What am I working on?
 
-As mentioned above, most of the comomits here will be related to me working on projects for Uni, but perhaps you'll see creative projects pop up too. 
+As mentioned above, most of the commits here will be related to me working on projects for Uni, but perhaps you'll see creative projects pop up too. 
 
 Here's a list of languages and Frameworks I've been familiarizing myself with so far, though!
 
@@ -22,6 +22,7 @@ Here's a list of languages and Frameworks I've been familiarizing myself with so
 - TypeScript
 - PHP
 - Python
+- Java
 
 ### Frameworks:
 - Laravel
