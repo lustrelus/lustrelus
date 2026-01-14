@@ -2,14 +2,19 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
+use App\Http\Controllers\BaseController;
+use App\Http\Controllers\WriterController;
+use App\Http\Controllers\PostController;
+
+Route::controller(BaseController::class)->group(function () {
+    Route::get('/', 'home');
+    Route::get('/about', 'about');
+    Route::get('/socials', 'socials');
 });
 
-Route::get('/about', function () {
-    return view('about');
+Route::controller(WriterController::class)->group(function () {
+    Route::get('/writer', 'index');
 });
 
-Route::get('/socials', function () {
-    return view('socials');
-});
+// Resource routes!
+Route::resource('posts', PostController::class);
